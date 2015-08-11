@@ -6,7 +6,8 @@ This was one of my first iOS projects, and is still [live on the App Store](http
 ## License
 GNU GPL v3.0 License.  
 Feel free to modify the code, just make sure to share your changes with the open source community.  
-Pull requests are welcome.
+Pull requests are welcome.  
+See LICENSE file for more information.
 
 ## Credit
 This app is developed by Thomas Suarez, Chief Engineer at [CarrotCorp](http://carrotcorp.com).

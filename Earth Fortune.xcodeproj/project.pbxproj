@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* Earth_FortuneAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Earth_FortuneAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		28D7ACF80DDB3853001CB0EB /* Earth_FortuneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* Earth_FortuneViewController.m */; };
+		E20FB9C316FA0DAA00746EF0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E20FB9C216FA0CB500746EF0 /* Reachability.m */; };
+		E20FB9C516FA0DB800746EF0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20FB9C416FA0DB800746EF0 /* CFNetwork.framework */; };
+		E20FB9C716FA0E0200746EF0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20FB9C616FA0E0200746EF0 /* SystemConfiguration.framework */; };
+		E22375DD1B798D000052462F /* earth.png in Resources */ = {isa = PBXBuildFile; fileRef = E22375DC1B798D000052462F /* earth.png */; };
+		E22375DF1B79980A0052462F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E22375DE1B79980A0052462F /* CoreImage.framework */; };
+		E24543501203B95F0018CE7F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E245434F1203B95F0018CE7F /* AVFoundation.framework */; };
+		E247B15011F939BB006F458C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E247B14F11F939BB006F458C /* AudioToolbox.framework */; };
+		E247B15411F939C0006F458C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E247B15311F939C0006F458C /* CoreLocation.framework */; };
+		E26ECD0318F39E5700A3C594 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26ECD0218F39E5700A3C594 /* Security.framework */; };
+		E26ECD0E18F3A85600A3C594 /* Icon_nonretina.png in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD0C18F3A85600A3C594 /* Icon_nonretina.png */; };
+		E26ECD0F18F3A85600A3C594 /* Icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD0D18F3A85600A3C594 /* Icon_retina.png */; };
+		E26ECD1918F3AD9E00A3C594 /* Icon_nonretina6.png in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD1718F3AD9E00A3C594 /* Icon_nonretina6.png */; };
+		E26ECD1A18F3AD9E00A3C594 /* Icon_retina6.png in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD1818F3AD9E00A3C594 /* Icon_retina6.png */; };
+		E26ECD1E18F3AE3800A3C594 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD1D18F3AE3800A3C594 /* Images.xcassets */; };
+		E2A4A11914E5F56100188265 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A4A11814E5F56100188265 /* QuartzCore.framework */; };
+		E2B5DA5018F1DA5A004EAE73 /* bgmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E2B5D9FA18F1DA5A004EAE73 /* bgmusic.mp3 */; };
+		E2B5DA5418F1DA5A004EAE73 /* earthlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5D9FE18F1DA5A004EAE73 /* earthlogo.png */; };
+		E2B5DA6318F1DA5A004EAE73 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA0F18F1DA5A004EAE73 /* envelope.png */; };
+		E2B5DA9318F1DA5A004EAE73 /* spacebg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4118F1DA5A004EAE73 /* spacebg3.jpg */; };
+		E2B5DA9518F1DA5A004EAE73 /* aquarius.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4418F1DA5A004EAE73 /* aquarius.png */; };
+		E2B5DA9618F1DA5A004EAE73 /* aries.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4518F1DA5A004EAE73 /* aries.png */; };
+		E2B5DA9718F1DA5A004EAE73 /* cancer.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4618F1DA5A004EAE73 /* cancer.png */; };
+		E2B5DA9818F1DA5A004EAE73 /* capricorn.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4718F1DA5A004EAE73 /* capricorn.png */; };
+		E2B5DA9918F1DA5A004EAE73 /* gemini.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4818F1DA5A004EAE73 /* gemini.png */; };
+		E2B5DA9A18F1DA5A004EAE73 /* leo.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4918F1DA5A004EAE73 /* leo.png */; };
+		E2B5DA9B18F1DA5A004EAE73 /* libra.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4A18F1DA5A004EAE73 /* libra.png */; };
+		E2B5DA9C18F1DA5A004EAE73 /* pisces.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4B18F1DA5A004EAE73 /* pisces.png */; };
+		E2B5DA9D18F1DA5A004EAE73 /* sagittarius.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4C18F1DA5A004EAE73 /* sagittarius.png */; };
+		E2B5DA9E18F1DA5A004EAE73 /* scorpio.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4D18F1DA5A004EAE73 /* scorpio.png */; };
+		E2B5DA9F18F1DA5A004EAE73 /* taurus.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4E18F1DA5A004EAE73 /* taurus.png */; };
+		E2B5DAA018F1DA5A004EAE73 /* virgo.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4F18F1DA5A004EAE73 /* virgo.png */; };
+		E2B5DAA318F1DAE3004EAE73 /* Earth_FortuneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DAA118F1DAE2004EAE73 /* Earth_FortuneViewController.xib */; };
+		E2B5DAA418F1DAE3004EAE73 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DAA218F1DAE2004EAE73 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* Earth_FortuneAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Earth_FortuneAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* Earth_FortuneAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Earth_FortuneAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Earth Fortune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Earth Fortune.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28D7ACF60DDB3853001CB0EB /* Earth_FortuneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Earth_FortuneViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* Earth_FortuneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Earth_FortuneViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Earth_Fortune_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Earth_Fortune_Prefix.pch; sourceTree = "<group>"; };
+		E20FB9C116FA0CB500746EF0 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		E20FB9C216FA0CB500746EF0 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		E20FB9C416FA0DB800746EF0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E20FB9C616FA0E0200746EF0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E22375DC1B798D000052462F /* earth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earth.png; sourceTree = "<group>"; };
+		E22375DE1B79980A0052462F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		E2361C051206514A005194CF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E245434F1203B95F0018CE7F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E247B14F11F939BB006F458C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E247B15311F939C0006F458C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E247B18D11F93A20006F458C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		E26ECD0218F39E5700A3C594 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E26ECD0C18F3A85600A3C594 /* Icon_nonretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_nonretina.png; sourceTree = "<group>"; };
+		E26ECD0D18F3A85600A3C594 /* Icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_retina.png; sourceTree = "<group>"; };
+		E26ECD1718F3AD9E00A3C594 /* Icon_nonretina6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_nonretina6.png; sourceTree = "<group>"; };
+		E26ECD1818F3AD9E00A3C594 /* Icon_retina6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_retina6.png; sourceTree = "<group>"; };
+		E26ECD1D18F3AE3800A3C594 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Earth Fortune/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		E2A4A11814E5F56100188265 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E2B5D9FA18F1DA5A004EAE73 /* bgmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgmusic.mp3; sourceTree = "<group>"; };
+		E2B5D9FE18F1DA5A004EAE73 /* earthlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earthlogo.png; sourceTree = "<group>"; };
+		E2B5DA0F18F1DA5A004EAE73 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
+		E2B5DA3F18F1DA5A004EAE73 /* spacebg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spacebg1.jpg; sourceTree = "<group>"; };
+		E2B5DA4018F1DA5A004EAE73 /* spacebg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spacebg2.jpg; sourceTree = "<group>"; };
+		E2B5DA4118F1DA5A004EAE73 /* spacebg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spacebg3.jpg; sourceTree = "<group>"; };
+		E2B5DA4218F1DA5A004EAE73 /* spacebg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spacebg4.jpg; sourceTree = "<group>"; };
+		E2B5DA4418F1DA5A004EAE73 /* aquarius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aquarius.png; sourceTree = "<group>"; };
+		E2B5DA4518F1DA5A004EAE73 /* aries.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aries.png; sourceTree = "<group>"; };
+		E2B5DA4618F1DA5A004EAE73 /* cancer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancer.png; sourceTree = "<group>"; };
+		E2B5DA4718F1DA5A004EAE73 /* capricorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = capricorn.png; sourceTree = "<group>"; };
+		E2B5DA4818F1DA5A004EAE73 /* gemini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gemini.png; sourceTree = "<group>"; };
+		E2B5DA4918F1DA5A004EAE73 /* leo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leo.png; sourceTree = "<group>"; };
+		E2B5DA4A18F1DA5A004EAE73 /* libra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = libra.png; sourceTree = "<group>"; };
+		E2B5DA4B18F1DA5A004EAE73 /* pisces.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pisces.png; sourceTree = "<group>"; };
+		E2B5DA4C18F1DA5A004EAE73 /* sagittarius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sagittarius.png; sourceTree = "<group>"; };
+		E2B5DA4D18F1DA5A004EAE73 /* scorpio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scorpio.png; sourceTree = "<group>"; };
+		E2B5DA4E18F1DA5A004EAE73 /* taurus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taurus.png; sourceTree = "<group>"; };
+		E2B5DA4F18F1DA5A004EAE73 /* virgo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virgo.png; sourceTree = "<group>"; };
+		E2B5DAA118F1DAE2004EAE73 /* Earth_FortuneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Earth_FortuneViewController.xib; sourceTree = "<group>"; };
+		E2B5DAA218F1DAE2004EAE73 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		E2F26DA0125C19C000CA322A /* libBump.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBump.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E22375DF1B79980A0052462F /* CoreImage.framework in Frameworks */,
+				E26ECD0318F39E5700A3C594 /* Security.framework in Frameworks */,
+				E20FB9C716FA0E0200746EF0 /* SystemConfiguration.framework in Frameworks */,
+				E20FB9C516FA0DB800746EF0 /* CFNetwork.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				E2A4A11914E5F56100188265 /* QuartzCore.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				E247B15011F939BB006F458C /* AudioToolbox.framework in Frameworks */,
+				E247B15411F939C0006F458C /* CoreLocation.framework in Frameworks */,
+				E24543501203B95F0018CE7F /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E20FB9C116FA0CB500746EF0 /* Reachability.h */,
+				E20FB9C216FA0CB500746EF0 /* Reachability.m */,
+				1D3623240D0F684500981E51 /* Earth_FortuneAppDelegate.h */,
+				1D3623250D0F684500981E51 /* Earth_FortuneAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* Earth_FortuneViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* Earth_FortuneViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Earth Fortune.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				E2B5D9F918F1DA5A004EAE73 /* Resources */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Earth_Fortune_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E22375DE1B79980A0052462F /* CoreImage.framework */,
+				E26ECD0218F39E5700A3C594 /* Security.framework */,
+				E20FB9C616FA0E0200746EF0 /* SystemConfiguration.framework */,
+				E20FB9C416FA0DB800746EF0 /* CFNetwork.framework */,
+				E2A4A11814E5F56100188265 /* QuartzCore.framework */,
+				E2F26DA0125C19C000CA322A /* libBump.a */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				E247B14F11F939BB006F458C /* AudioToolbox.framework */,
+				E247B15311F939C0006F458C /* CoreLocation.framework */,
+				E247B18D11F93A20006F458C /* MessageUI.framework */,
+				E245434F1203B95F0018CE7F /* AVFoundation.framework */,
+				E2361C051206514A005194CF /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2B5D9F918F1DA5A004EAE73 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E26ECD1D18F3AE3800A3C594 /* Images.xcassets */,
+				E2B5DAA218F1DAE2004EAE73 /* MainWindow.xib */,
+				E2B5DAA118F1DAE2004EAE73 /* Earth_FortuneViewController.xib */,
+				E2B5D9FA18F1DA5A004EAE73 /* bgmusic.mp3 */,
+				E22375DC1B798D000052462F /* earth.png */,
+				E2B5D9FE18F1DA5A004EAE73 /* earthlogo.png */,
+				E2B5DA0F18F1DA5A004EAE73 /* envelope.png */,
+				E2B5DA1018F1DA5A004EAE73 /* Icons */,
+				E2B5DA3F18F1DA5A004EAE73 /* spacebg1.jpg */,
+				E2B5DA4018F1DA5A004EAE73 /* spacebg2.jpg */,
+				E2B5DA4118F1DA5A004EAE73 /* spacebg3.jpg */,
+				E2B5DA4218F1DA5A004EAE73 /* spacebg4.jpg */,
+				E2B5DA4318F1DA5A004EAE73 /* zodiac */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E2B5DA1018F1DA5A004EAE73 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				E26ECD1718F3AD9E00A3C594 /* Icon_nonretina6.png */,
+				E26ECD1818F3AD9E00A3C594 /* Icon_retina6.png */,
+				E26ECD0C18F3A85600A3C594 /* Icon_nonretina.png */,
+				E26ECD0D18F3A85600A3C594 /* Icon_retina.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		E2B5DA4318F1DA5A004EAE73 /* zodiac */ = {
+			isa = PBXGroup;
+			children = (
+				E2B5DA4418F1DA5A004EAE73 /* aquarius.png */,
+				E2B5DA4518F1DA5A004EAE73 /* aries.png */,
+				E2B5DA4618F1DA5A004EAE73 /* cancer.png */,
+				E2B5DA4718F1DA5A004EAE73 /* capricorn.png */,
+				E2B5DA4818F1DA5A004EAE73 /* gemini.png */,
+				E2B5DA4918F1DA5A004EAE73 /* leo.png */,
+				E2B5DA4A18F1DA5A004EAE73 /* libra.png */,
+				E2B5DA4B18F1DA5A004EAE73 /* pisces.png */,
+				E2B5DA4C18F1DA5A004EAE73 /* sagittarius.png */,
+				E2B5DA4D18F1DA5A004EAE73 /* scorpio.png */,
+				E2B5DA4E18F1DA5A004EAE73 /* taurus.png */,
+				E2B5DA4F18F1DA5A004EAE73 /* virgo.png */,
+			);
+			path = zodiac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Earth Fortune */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Earth Fortune" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Earth Fortune";
+			productName = "Earth Fortune";
+			productReference = 1D6058910D05DD3D006BFB54 /* Earth Fortune.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Earth Fortune" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Earth Fortune */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2B5DA9318F1DA5A004EAE73 /* spacebg3.jpg in Resources */,
+				E26ECD1E18F3AE3800A3C594 /* Images.xcassets in Resources */,
+				E2B5DA9718F1DA5A004EAE73 /* cancer.png in Resources */,
+				E2B5DA9618F1DA5A004EAE73 /* aries.png in Resources */,
+				E2B5DA9918F1DA5A004EAE73 /* gemini.png in Resources */,
+				E2B5DAA318F1DAE3004EAE73 /* Earth_FortuneViewController.xib in Resources */,
+				E2B5DA9C18F1DA5A004EAE73 /* pisces.png in Resources */,
+				E2B5DA9818F1DA5A004EAE73 /* capricorn.png in Resources */,
+				E2B5DA9F18F1DA5A004EAE73 /* taurus.png in Resources */,
+				E2B5DA9E18F1DA5A004EAE73 /* scorpio.png in Resources */,
+				E26ECD0F18F3A85600A3C594 /* Icon_retina.png in Resources */,
+				E2B5DAA018F1DA5A004EAE73 /* virgo.png in Resources */,
+				E2B5DA9D18F1DA5A004EAE73 /* sagittarius.png in Resources */,
+				E2B5DA5018F1DA5A004EAE73 /* bgmusic.mp3 in Resources */,
+				E26ECD1918F3AD9E00A3C594 /* Icon_nonretina6.png in Resources */,
+				E2B5DA9B18F1DA5A004EAE73 /* libra.png in Resources */,
+				E22375DD1B798D000052462F /* earth.png in Resources */,
+				E2B5DA9518F1DA5A004EAE73 /* aquarius.png in Resources */,
+				E26ECD0E18F3A85600A3C594 /* Icon_nonretina.png in Resources */,
+				E2B5DA5418F1DA5A004EAE73 /* earthlogo.png in Resources */,
+				E2B5DA6318F1DA5A004EAE73 /* envelope.png in Resources */,
+				E2B5DAA418F1DAE3004EAE73 /* MainWindow.xib in Resources */,
+				E26ECD1A18F3AD9E00A3C594 /* Icon_retina6.png in Resources */,
+				E2B5DA9A18F1DA5A004EAE73 /* leo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20FB9C316FA0DAA00746EF0 /* Reachability.m in Sources */,
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* Earth_FortuneAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* Earth_FortuneViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Earth_Fortune_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "Earth_Fortune-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/tom/Downloads/Flurry,
+					iPhone,
+					SDK,
+					viPhone,
+					"4.4.0/Flurry-iOS-4.4.0/Flurry",
+					"$(PROJECT_DIR)/Flurry",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Earth Fortune";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Earth_Fortune_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "Earth_Fortune-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/tom/Downloads/Flurry,
+					iPhone,
+					SDK,
+					viPhone,
+					"4.4.0/Flurry-iOS-4.4.0/Flurry",
+					"$(PROJECT_DIR)/Flurry",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					iAd,
+				);
+				PRODUCT_NAME = "Earth Fortune";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		E2B9239412010CC300CBF13E /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Distribution;
+		};
+		E2B9239512010CC300CBF13E /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Earth_Fortune_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "Earth_Fortune-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/tom/Downloads/Flurry,
+					iPhone,
+					SDK,
+					viPhone,
+					"4.4.0/Flurry-iOS-4.4.0/Flurry",
+					"$(PROJECT_DIR)/Flurry",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					iAd,
+				);
+				PRODUCT_NAME = "Earth Fortune";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Earth Fortune" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				E2B9239512010CC300CBF13E /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Earth Fortune" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				E2B9239412010CC300CBF13E /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -10,4 +10,8 @@ Pull requests are welcome.
 See LICENSE file for more information.
 
 ## Credit
-This app is developed by Thomas Suarez, Chief Engineer at [CarrotCorp](http://carrotcorp.com).
+This app is developed by Thomas Suarez, Chief Engineer at [CarrotCorp](http://carrotcorp.com).  
+
+* Earth image (resources/earth.png) courtesy [NASA](https://www.nasa.gov/).
+* Background audio (resources/bgmusic.mp3) courtesy Kevin MacLeod, [Incompetech](www.incompetech.com).  
+* Background image (resources/spacebg.jpg) courtesy Juskteez Vu, [Unsplash](https://unsplash.com/photos/mwhklqGVzck).

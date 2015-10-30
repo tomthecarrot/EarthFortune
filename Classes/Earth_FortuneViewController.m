@@ -249,8 +249,6 @@ bool reachable; // are the internet connection AND server available
     // Set Hud attributes
     [self setHudAttrs:picker];
     
-    [self.view addSubview:picker];
-    
     // Fade in picker
     [UIView animateWithDuration:fadeTime animations:^{
         picker.alpha = 0.6;
@@ -287,6 +285,8 @@ bool reachable; // are the internet connection AND server available
     [self refreshHoro];
     
     // Fade out tutorial hud (if necessary)
+    [sud setBool:true forKey:@"tutdone"];
+    [sud synchronize];
     [self fadeHud: hud2 shouldFadeIn: false withDelay: 0.0];
     
     // Fade out the picker view and Fade in the buttons/horoscope text

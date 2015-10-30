@@ -31,6 +31,7 @@ UIView *newPicker; // horoscope sign picker view
 NSURL *horoURL; // horoscope server URL
 bool reachable; // are the internet connection AND server available
 
+#pragma mark INIT
 
 - (void)viewDidLoad
 {
@@ -69,6 +70,8 @@ bool reachable; // are the internet connection AND server available
         }];
     }
 }
+
+#pragma mark Network
 
 - (void)testNetwork {
     // Initialize reachability object with CarrotCorp server
@@ -134,6 +137,8 @@ bool reachable; // are the internet connection AND server available
         });
     }
 }
+
+#pragma mark Earth UI
 
 - (void)setupFade {
     // Set initial earth fade colors
@@ -202,6 +207,17 @@ bool reachable; // are the internet connection AND server available
     return endImage;
 }
 
+#pragma mark Hud UI
+
+- (void)setHudAttrs:(UIView *)hud {
+    hud.layer.cornerRadius = 15.0;
+    hud.layer.shadowColor = [UIColor blackColor].CGColor;
+    hud.layer.shadowOpacity = 0.5;
+    hud.layer.shadowOffset = CGSizeMake(2.0, 2.0);
+    hud.layer.shadowRadius = 10.0;
+    hud.alpha = 0;
+}
+
 - (void)tutorial {
     
     if (tutnum == 1) {
@@ -239,15 +255,6 @@ bool reachable; // are the internet connection AND server available
     tutnum++;
 }
 
-- (void)setHudAttrs:(UIView *)hud {
-    hud.layer.cornerRadius = 15.0;
-    hud.layer.shadowColor = [UIColor blackColor].CGColor;
-    hud.layer.shadowOpacity = 0.5;
-    hud.layer.shadowOffset = CGSizeMake(2.0, 2.0);
-    hud.layer.shadowRadius = 10.0;
-    hud.alpha = 0;
-}
-
 - (IBAction)showPicker:(id)sender {
     newPicker = picker;
     [picker removeFromSuperview];
@@ -266,7 +273,9 @@ bool reachable; // are the internet connection AND server available
     }];
 }
 
-- (IBAction)continueNoHoro:(id)sender {
+#pragma mark Button UI
+
+- (IBAction)continueNoHoro:(id)sender { // "i" button
     // User continues without viewing a horoscope, wants to watch the Earth fade only.
     [UIView animateWithDuration:2.5 animations:^{
         newHud2.alpha = 0.0;
@@ -276,7 +285,7 @@ bool reachable; // are the internet connection AND server available
     }];
 }
 
-- (IBAction)selectHoro:(UIButton *)button {
+- (IBAction)selectHoro:(UIButton *)button { // "+" button
     // Possible horoscope signs
     NSArray *signs = @[ @"Aries", @"Taurus", @"Gemini", @"Cancer", @"Leo", @"Virgo", @"Libra", @"Scorpio", @"Sagittarius", @"Capricorn", @"Aquarius", @"Pisces" ];
     
@@ -300,7 +309,7 @@ bool reachable; // are the internet connection AND server available
     }];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark ETC
 
 - (BOOL)prefersStatusBarHidden {
     return YES;

@@ -61,14 +61,12 @@ bool reachable; // are the internet connection AND server available
         [NSTimer scheduledTimerWithTimeInterval:4.5 target:self selector:@selector(tutorial) userInfo:nil repeats:YES];
     }
     else {
-        [UIView beginAnimations: @"Startup_tutdone" context:nil];
-        [UIView setAnimationDuration:4];
-        
-        horoText.alpha = 0.8;
-        iButton.alpha = 0.8;
-        arrowButton.alpha = 0.8;
-        
-        [UIView commitAnimations];
+        // Fade away tutorial
+        [UIView animateWithDuration:4 animations:^{
+            horoText.alpha = 0.8;
+            iButton.alpha = 0.8;
+            arrowButton.alpha = 0.8;
+        }];
     }
 }
 
@@ -210,42 +208,30 @@ bool reachable; // are the internet connection AND server available
         newHud = hud1;
         [hud1 removeFromSuperview];
         
-        newHud.layer.cornerRadius = 15.0;
-        newHud.layer.shadowColor = [UIColor blackColor].CGColor;
-        newHud.layer.shadowOpacity = 0.5;
-        newHud.layer.shadowOffset = CGSizeMake(2.0, 2.0);
-        newHud.layer.shadowRadius = 10.0;
-        newHud.alpha = 0;
+        // Set Hud attributes
+        [self setHudAttrs:newHud];
         
         [self.view addSubview:newHud];
         
-        [UIView beginAnimations: @"FadeIn_1" context:nil];
-        [UIView setAnimationDuration:4];
-        
-        newHud.alpha = 0.5;
-        
-        [UIView commitAnimations];
+        // Fade in Hud 1
+        [UIView animateWithDuration:2.5 animations:^{
+            newHud.alpha = 0.5;
+        }];
     }
     if (tutnum == 2) {
         newHud2 = hud2;
         [hud2 removeFromSuperview];
         
-        newHud2.layer.cornerRadius = 15.0;
-        newHud2.layer.shadowColor = [UIColor blackColor].CGColor;
-        newHud2.layer.shadowOpacity = 0.5;
-        newHud2.layer.shadowOffset = CGSizeMake(2.0, 2.0);
-        newHud2.layer.shadowRadius = 10.0;
-        newHud2.alpha = 0;
+        // Set Hud attributes
+        [self setHudAttrs:newHud2];
         
         [self.view addSubview:newHud2];
-        ///////////////////
-        [UIView beginAnimations: @"FadeOut_1, FadeIn_2" context:nil];
-        [UIView setAnimationDuration:4];
         
-        newHud.alpha = 0.0;
-        newHud2.alpha = 0.5;
-        
-        [UIView commitAnimations];
+        // Fade in Hud 2
+        [UIView animateWithDuration:2.5 animations:^{
+            newHud.alpha = 0.0;
+            newHud2.alpha = 0.5;
+        }];
         
         [sud setBool:true forKey:@"tutdone"];
     }
@@ -253,41 +239,41 @@ bool reachable; // are the internet connection AND server available
     tutnum++;
 }
 
+- (void)setHudAttrs:(UIView *)hud {
+    hud.layer.cornerRadius = 15.0;
+    hud.layer.shadowColor = [UIColor blackColor].CGColor;
+    hud.layer.shadowOpacity = 0.5;
+    hud.layer.shadowOffset = CGSizeMake(2.0, 2.0);
+    hud.layer.shadowRadius = 10.0;
+    hud.alpha = 0;
+}
+
 - (IBAction)showPicker:(id)sender {
     newPicker = picker;
     [picker removeFromSuperview];
     
-    newPicker.layer.cornerRadius = 15.0;
-    newPicker.layer.shadowColor = [UIColor blackColor].CGColor;
-    newPicker.layer.shadowOpacity = 0.5;
-    newPicker.layer.shadowOffset = CGSizeMake(2.0, 2.0);
-    newPicker.layer.shadowRadius = 10.0;
-    newPicker.alpha = 0;
+    // Set Hud attributes
+    [self setHudAttrs:newPicker];
     
     [self.view addSubview:newPicker];
-    ///////////////////
-    [UIView beginAnimations: @"FadeOut_2, FadeIn_Picker" context:nil];
-    [UIView setAnimationDuration:2.5];
     
-    newHud2.alpha = 0.0;
-    newPicker.alpha = 0.6;
-    iButton.alpha = 0.0;
-    arrowButton.alpha = 0.0;
-    
-    [UIView commitAnimations];
+    // Fade in picker
+    [UIView animateWithDuration:2.5 animations:^{
+        newHud2.alpha = 0.0;
+        newPicker.alpha = 0.6;
+        iButton.alpha = 0.0;
+        arrowButton.alpha = 0.0;
+    }];
 }
 
-// User continues without viewing a horoscope, wants to watch the Earth fade only.
 - (IBAction)continueNoHoro:(id)sender {
-    [UIView beginAnimations: @"FadeOut_2, NoHoro" context:nil];
-    [UIView setAnimationDuration:2.5];
-    
-    newHud2.alpha = 0.0;
-    iButton.alpha = 0.8;
-    arrowButton.alpha = 0.0;
-    horoText.alpha = 0.0;
-    
-    [UIView commitAnimations];
+    // User continues without viewing a horoscope, wants to watch the Earth fade only.
+    [UIView animateWithDuration:2.5 animations:^{
+        newHud2.alpha = 0.0;
+        iButton.alpha = 0.8;
+        arrowButton.alpha = 0.0;
+        horoText.alpha = 0.0;
+    }];
 }
 
 - (IBAction)selectHoro:(UIButton *)button {
@@ -306,15 +292,12 @@ bool reachable; // are the internet connection AND server available
     [self refreshHoro];
     
     // Fade out the picker view and Fade in the buttons/horoscope text
-    [UIView beginAnimations: @"FadeOut_Picker, FadeIn_Horo" context:nil];
-    [UIView setAnimationDuration:2.5];
-    
-    picker.alpha = 0.0;
-    horoText.alpha = 0.8;
-    iButton.alpha = 0.8;
-    arrowButton.alpha = 0.8;
-    
-    [UIView commitAnimations];
+    [UIView animateWithDuration:2.5 animations:^{
+        picker.alpha = 0.0;
+        horoText.alpha = 0.8;
+        iButton.alpha = 0.8;
+        arrowButton.alpha = 0.8;
+    }];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

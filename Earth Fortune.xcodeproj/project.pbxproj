@@ -27,11 +27,9 @@
 		E26ECD1918F3AD9E00A3C594 /* Icon_nonretina6.png in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD1718F3AD9E00A3C594 /* Icon_nonretina6.png */; };
 		E26ECD1A18F3AD9E00A3C594 /* Icon_retina6.png in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD1818F3AD9E00A3C594 /* Icon_retina6.png */; };
 		E26ECD1E18F3AE3800A3C594 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD1D18F3AE3800A3C594 /* Images.xcassets */; };
+		E29B99B81BE3169C00B8DB65 /* spacebg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E29B99B71BE3169C00B8DB65 /* spacebg.jpg */; };
 		E2A4A11914E5F56100188265 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A4A11814E5F56100188265 /* QuartzCore.framework */; };
 		E2B5DA5018F1DA5A004EAE73 /* bgmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E2B5D9FA18F1DA5A004EAE73 /* bgmusic.mp3 */; };
-		E2B5DA5418F1DA5A004EAE73 /* earthlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5D9FE18F1DA5A004EAE73 /* earthlogo.png */; };
-		E2B5DA6318F1DA5A004EAE73 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA0F18F1DA5A004EAE73 /* envelope.png */; };
-		E2B5DA9318F1DA5A004EAE73 /* spacebg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4118F1DA5A004EAE73 /* spacebg3.jpg */; };
 		E2B5DA9518F1DA5A004EAE73 /* aquarius.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4418F1DA5A004EAE73 /* aquarius.png */; };
 		E2B5DA9618F1DA5A004EAE73 /* aries.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4518F1DA5A004EAE73 /* aries.png */; };
 		E2B5DA9718F1DA5A004EAE73 /* cancer.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DA4618F1DA5A004EAE73 /* cancer.png */; };
@@ -76,14 +74,9 @@
 		E26ECD1718F3AD9E00A3C594 /* Icon_nonretina6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_nonretina6.png; sourceTree = "<group>"; };
 		E26ECD1818F3AD9E00A3C594 /* Icon_retina6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_retina6.png; sourceTree = "<group>"; };
 		E26ECD1D18F3AE3800A3C594 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Earth Fortune/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		E29B99B71BE3169C00B8DB65 /* spacebg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spacebg.jpg; path = resources/spacebg.jpg; sourceTree = SOURCE_ROOT; };
 		E2A4A11814E5F56100188265 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E2B5D9FA18F1DA5A004EAE73 /* bgmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgmusic.mp3; sourceTree = "<group>"; };
-		E2B5D9FE18F1DA5A004EAE73 /* earthlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earthlogo.png; sourceTree = "<group>"; };
-		E2B5DA0F18F1DA5A004EAE73 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
-		E2B5DA3F18F1DA5A004EAE73 /* spacebg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spacebg1.jpg; sourceTree = "<group>"; };
-		E2B5DA4018F1DA5A004EAE73 /* spacebg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spacebg2.jpg; sourceTree = "<group>"; };
-		E2B5DA4118F1DA5A004EAE73 /* spacebg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spacebg3.jpg; sourceTree = "<group>"; };
-		E2B5DA4218F1DA5A004EAE73 /* spacebg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spacebg4.jpg; sourceTree = "<group>"; };
 		E2B5DA4418F1DA5A004EAE73 /* aquarius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aquarius.png; sourceTree = "<group>"; };
 		E2B5DA4518F1DA5A004EAE73 /* aries.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aries.png; sourceTree = "<group>"; };
 		E2B5DA4618F1DA5A004EAE73 /* cancer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancer.png; sourceTree = "<group>"; };
@@ -98,7 +91,6 @@
 		E2B5DA4F18F1DA5A004EAE73 /* virgo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virgo.png; sourceTree = "<group>"; };
 		E2B5DAA118F1DAE2004EAE73 /* Earth_FortuneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Earth_FortuneViewController.xib; sourceTree = "<group>"; };
 		E2B5DAA218F1DAE2004EAE73 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		E2F26DA0125C19C000CA322A /* libBump.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBump.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +165,6 @@
 				E20FB9C616FA0E0200746EF0 /* SystemConfiguration.framework */,
 				E20FB9C416FA0DB800746EF0 /* CFNetwork.framework */,
 				E2A4A11814E5F56100188265 /* QuartzCore.framework */,
-				E2F26DA0125C19C000CA322A /* libBump.a */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
@@ -193,14 +184,9 @@
 				E2B5DAA218F1DAE2004EAE73 /* MainWindow.xib */,
 				E2B5DAA118F1DAE2004EAE73 /* Earth_FortuneViewController.xib */,
 				E2B5D9FA18F1DA5A004EAE73 /* bgmusic.mp3 */,
+				E29B99B71BE3169C00B8DB65 /* spacebg.jpg */,
 				E22375DC1B798D000052462F /* earth.png */,
-				E2B5D9FE18F1DA5A004EAE73 /* earthlogo.png */,
-				E2B5DA0F18F1DA5A004EAE73 /* envelope.png */,
 				E2B5DA1018F1DA5A004EAE73 /* Icons */,
-				E2B5DA3F18F1DA5A004EAE73 /* spacebg1.jpg */,
-				E2B5DA4018F1DA5A004EAE73 /* spacebg2.jpg */,
-				E2B5DA4118F1DA5A004EAE73 /* spacebg3.jpg */,
-				E2B5DA4218F1DA5A004EAE73 /* spacebg4.jpg */,
 				E2B5DA4318F1DA5A004EAE73 /* zodiac */,
 			);
 			path = Resources;
@@ -288,12 +274,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2B5DA9318F1DA5A004EAE73 /* spacebg3.jpg in Resources */,
 				E26ECD1E18F3AE3800A3C594 /* Images.xcassets in Resources */,
 				E2B5DA9718F1DA5A004EAE73 /* cancer.png in Resources */,
 				E2B5DA9618F1DA5A004EAE73 /* aries.png in Resources */,
 				E2B5DA9918F1DA5A004EAE73 /* gemini.png in Resources */,
 				E2B5DAA318F1DAE3004EAE73 /* Earth_FortuneViewController.xib in Resources */,
+				E29B99B81BE3169C00B8DB65 /* spacebg.jpg in Resources */,
 				E2B5DA9C18F1DA5A004EAE73 /* pisces.png in Resources */,
 				E2B5DA9818F1DA5A004EAE73 /* capricorn.png in Resources */,
 				E2B5DA9F18F1DA5A004EAE73 /* taurus.png in Resources */,
@@ -307,8 +293,6 @@
 				E22375DD1B798D000052462F /* earth.png in Resources */,
 				E2B5DA9518F1DA5A004EAE73 /* aquarius.png in Resources */,
 				E26ECD0E18F3A85600A3C594 /* Icon_nonretina.png in Resources */,
-				E2B5DA5418F1DA5A004EAE73 /* earthlogo.png in Resources */,
-				E2B5DA6318F1DA5A004EAE73 /* envelope.png in Resources */,
 				E2B5DAA418F1DAE3004EAE73 /* MainWindow.xib in Resources */,
 				E26ECD1A18F3AD9E00A3C594 /* Icon_retina6.png in Resources */,
 				E2B5DA9A18F1DA5A004EAE73 /* leo.png in Resources */,

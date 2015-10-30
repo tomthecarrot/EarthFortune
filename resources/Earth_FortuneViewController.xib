@@ -38,12 +38,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="earthlogo.png" id="5">
-                    <rect key="frame" x="274" y="21" width="32" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleAspectFill" image="spacebg3.jpg" id="48">
+                <imageView userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleAspectFill" image="spacebg.jpg" id="48">
                     <rect key="frame" x="-15" y="-32" width="799" height="1079"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <gestureRecognizers/>
@@ -437,15 +432,14 @@
         <image name="aries.png" width="248" height="235"/>
         <image name="cancer.png" width="300" height="235"/>
         <image name="capricorn.png" width="246" height="235"/>
-        <image name="earth.png" width="800" height="800"/>
-        <image name="earthlogo.png" width="200" height="198"/>
+        <image name="earth.png" width="2048" height="2048"/>
         <image name="gemini.png" width="229" height="235"/>
         <image name="leo.png" width="184" height="235"/>
         <image name="libra.png" width="281" height="235"/>
         <image name="pisces.png" width="189" height="235"/>
         <image name="sagittarius.png" width="235" height="235"/>
         <image name="scorpio.png" width="214" height="235"/>
-        <image name="spacebg3.jpg" width="1382" height="856"/>
+        <image name="spacebg.jpg" width="1382" height="856"/>
         <image name="taurus.png" width="225" height="235"/>
         <image name="virgo.png" width="194" height="235"/>
     </resources>

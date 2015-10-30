@@ -10,22 +10,23 @@
 
 @implementation Earth_FortuneViewController
 
-/* Main */
-int i = 0; // current Earth color image in the cycle
-float hueChange = 0; // current amount of hue change for image tinting
-int tutnum; // which part of the tutorial the user is currently on
-static int interval = 3; // how fast the Earth changes color
+/* Horoscope */
 NSString *horoscope; // The fetched horoscope
 NSString *sign; // The user's sign
-NSUserDefaults *sud; // Stores the user's sign and whether or not the tutorial was done already
-NSMutableArray *colors; // earth fade colors
-AVAudioPlayer *music; // background music player
 
-/* View Objects */
+/* Earth */
+const int interval = 3; // how fast the Earth changes color
+int i = 0; // current Earth color image in the cycle
+float hueChange = 0; // current amount of hue change for image tinting
+NSMutableArray *colors; // earth fade colors
+
+/* Views */
+const float fadeTime = 2.5;
 UIImage *earthDefault; // default white Earth to be tinted
-UIView *newHud;
-UIView *newHud2;
-UIView *newPicker; // horoscope sign picker view
+
+/* Objects */
+NSUserDefaults *sud; // Stores the user's sign and whether or not the tutorial was done already
+AVAudioPlayer *music; // background music player
 
 /* Network */
 NSURL *horoURL; // horoscope server URL
@@ -58,8 +59,7 @@ bool reachable; // are the internet connection AND server available
     // If the tutorial was never done before, start it now
     if (![sud boolForKey:@"tutdone"]) {
         NSLog(@"Starting tutorial...", nil);
-        tutnum = 1;
-        [NSTimer scheduledTimerWithTimeInterval:4.5 target:self selector:@selector(tutorial) userInfo:nil repeats:YES];
+        [self startTutorial];
     }
     else {
         // Fade away tutorial
@@ -161,7 +161,7 @@ bool reachable; // are the internet connection AND server available
 // Cycle through the Earth color images
 - (void)fadeColor {
     // If the image is done with its cycle, restart
-    if (i == 7) {
+    if (i == colors.count) {
         i = 0;
         [self fadeColor];
     }
@@ -218,56 +218,42 @@ bool reachable; // are the internet connection AND server available
     hud.alpha = 0;
 }
 
-- (void)tutorial {
-    
-    if (tutnum == 1) {
-        newHud = hud1;
-        [hud1 removeFromSuperview];
+- (void)fadeHud:(UIView *)hud shouldFadeIn:(bool)shouldFadeIn withDelay:(float)delayTime {
+
+    // Delay action
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayTime * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
         
-        // Set Hud attributes
-        [self setHudAttrs:newHud];
+        float newAlpha = shouldFadeIn ? 0.5 : 0.0;
         
-        [self.view addSubview:newHud];
-        
-        // Fade in Hud 1
-        [UIView animateWithDuration:2.5 animations:^{
-            newHud.alpha = 0.5;
-        }];
-    }
-    if (tutnum == 2) {
-        newHud2 = hud2;
-        [hud2 removeFromSuperview];
-        
-        // Set Hud attributes
-        [self setHudAttrs:newHud2];
-        
-        [self.view addSubview:newHud2];
-        
-        // Fade in Hud 2
-        [UIView animateWithDuration:2.5 animations:^{
-            newHud.alpha = 0.0;
-            newHud2.alpha = 0.5;
+        [UIView animateWithDuration:fadeTime animations: ^{
+            hud.alpha = newAlpha;
         }];
         
-        [sud setBool:true forKey:@"tutdone"];
-    }
+    });
     
-    tutnum++;
+}
+
+- (void)startTutorial {
+    // Set Hud attributes
+    [self setHudAttrs:hud1];
+    [self setHudAttrs:hud2];
+    
+    // Cycle tutorial Hud screens
+    [self fadeHud: hud1 shouldFadeIn: true withDelay: 0.0]; // fade in Hud 1
+    [self fadeHud: hud1 shouldFadeIn: false withDelay: fadeTime + 3]; // fade out Hud 1
+    [self fadeHud: hud2 shouldFadeIn: true withDelay: fadeTime + 3]; // fade in Hud 2
 }
 
 - (IBAction)showPicker:(id)sender {
-    newPicker = picker;
-    [picker removeFromSuperview];
-    
     // Set Hud attributes
-    [self setHudAttrs:newPicker];
+    [self setHudAttrs:picker];
     
-    [self.view addSubview:newPicker];
+    [self.view addSubview:picker];
     
     // Fade in picker
-    [UIView animateWithDuration:2.5 animations:^{
-        newHud2.alpha = 0.0;
-        newPicker.alpha = 0.6;
+    [UIView animateWithDuration:fadeTime animations:^{
+        picker.alpha = 0.6;
         iButton.alpha = 0.0;
         arrowButton.alpha = 0.0;
     }];
@@ -277,8 +263,8 @@ bool reachable; // are the internet connection AND server available
 
 - (IBAction)continueNoHoro:(id)sender { // "i" button
     // User continues without viewing a horoscope, wants to watch the Earth fade only.
-    [UIView animateWithDuration:2.5 animations:^{
-        newHud2.alpha = 0.0;
+    [UIView animateWithDuration:fadeTime animations:^{
+        picker.alpha = 0.0;
         iButton.alpha = 0.8;
         arrowButton.alpha = 0.0;
         horoText.alpha = 0.0;
@@ -300,8 +286,11 @@ bool reachable; // are the internet connection AND server available
     // Fetch the horoscope and show it
     [self refreshHoro];
     
+    // Fade out tutorial hud (if necessary)
+    [self fadeHud: hud2 shouldFadeIn: false withDelay: 0.0];
+    
     // Fade out the picker view and Fade in the buttons/horoscope text
-    [UIView animateWithDuration:2.5 animations:^{
+    [UIView animateWithDuration:fadeTime animations:^{
         picker.alpha = 0.0;
         horoText.alpha = 0.8;
         iButton.alpha = 0.8;

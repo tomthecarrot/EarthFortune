@@ -164,6 +164,7 @@ bool reachable; // are the internet connection AND server available
     if (i == colors.count) {
         i = 0;
         [self fadeColor];
+        return;
     }
     
     // Set color tint

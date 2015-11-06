@@ -22,10 +22,6 @@
 		E247B15011F939BB006F458C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E247B14F11F939BB006F458C /* AudioToolbox.framework */; };
 		E247B15411F939C0006F458C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E247B15311F939C0006F458C /* CoreLocation.framework */; };
 		E26ECD0318F39E5700A3C594 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26ECD0218F39E5700A3C594 /* Security.framework */; };
-		E26ECD0E18F3A85600A3C594 /* Icon_nonretina.png in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD0C18F3A85600A3C594 /* Icon_nonretina.png */; };
-		E26ECD0F18F3A85600A3C594 /* Icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD0D18F3A85600A3C594 /* Icon_retina.png */; };
-		E26ECD1918F3AD9E00A3C594 /* Icon_nonretina6.png in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD1718F3AD9E00A3C594 /* Icon_nonretina6.png */; };
-		E26ECD1A18F3AD9E00A3C594 /* Icon_retina6.png in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD1818F3AD9E00A3C594 /* Icon_retina6.png */; };
 		E26ECD1E18F3AE3800A3C594 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26ECD1D18F3AE3800A3C594 /* Images.xcassets */; };
 		E29B99B81BE3169C00B8DB65 /* spacebg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E29B99B71BE3169C00B8DB65 /* spacebg.jpg */; };
 		E2A4A11914E5F56100188265 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A4A11814E5F56100188265 /* QuartzCore.framework */; };
@@ -69,10 +65,6 @@
 		E247B15311F939C0006F458C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E247B18D11F93A20006F458C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E26ECD0218F39E5700A3C594 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		E26ECD0C18F3A85600A3C594 /* Icon_nonretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_nonretina.png; sourceTree = "<group>"; };
-		E26ECD0D18F3A85600A3C594 /* Icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_retina.png; sourceTree = "<group>"; };
-		E26ECD1718F3AD9E00A3C594 /* Icon_nonretina6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_nonretina6.png; sourceTree = "<group>"; };
-		E26ECD1818F3AD9E00A3C594 /* Icon_retina6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_retina6.png; sourceTree = "<group>"; };
 		E26ECD1D18F3AE3800A3C594 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Earth Fortune/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		E29B99B71BE3169C00B8DB65 /* spacebg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spacebg.jpg; path = resources/spacebg.jpg; sourceTree = SOURCE_ROOT; };
 		E2A4A11814E5F56100188265 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -192,17 +184,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		E2B5DA1018F1DA5A004EAE73 /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				E26ECD1718F3AD9E00A3C594 /* Icon_nonretina6.png */,
-				E26ECD1818F3AD9E00A3C594 /* Icon_retina6.png */,
-				E26ECD0C18F3A85600A3C594 /* Icon_nonretina.png */,
-				E26ECD0D18F3A85600A3C594 /* Icon_retina.png */,
-			);
-			path = Icons;
-			sourceTree = "<group>";
-		};
 		E2B5DA4318F1DA5A004EAE73 /* zodiac */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,17 +265,13 @@
 				E2B5DA9818F1DA5A004EAE73 /* capricorn.png in Resources */,
 				E2B5DA9F18F1DA5A004EAE73 /* taurus.png in Resources */,
 				E2B5DA9E18F1DA5A004EAE73 /* scorpio.png in Resources */,
-				E26ECD0F18F3A85600A3C594 /* Icon_retina.png in Resources */,
 				E2B5DAA018F1DA5A004EAE73 /* virgo.png in Resources */,
 				E2B5DA9D18F1DA5A004EAE73 /* sagittarius.png in Resources */,
 				E2B5DA5018F1DA5A004EAE73 /* bgmusic.mp3 in Resources */,
-				E26ECD1918F3AD9E00A3C594 /* Icon_nonretina6.png in Resources */,
 				E2B5DA9B18F1DA5A004EAE73 /* libra.png in Resources */,
 				E22375DD1B798D000052462F /* earth.png in Resources */,
 				E2B5DA9518F1DA5A004EAE73 /* aquarius.png in Resources */,
-				E26ECD0E18F3A85600A3C594 /* Icon_nonretina.png in Resources */,
 				E2B5DAA418F1DAE3004EAE73 /* MainWindow.xib in Resources */,
-				E26ECD1A18F3AD9E00A3C594 /* Icon_retina6.png in Resources */,
 				E2B5DA9A18F1DA5A004EAE73 /* leo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

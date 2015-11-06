@@ -8,7 +8,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Earth_FortuneViewController">
             <connections>
-                <outlet property="arrowButton" destination="128" id="NSQ-KA-oSe"/>
                 <outlet property="bgholder" destination="48" id="49"/>
                 <outlet property="horoText" destination="85" id="86"/>
                 <outlet property="hud1" destination="88" id="93"/>
@@ -16,6 +15,7 @@
                 <outlet property="iButton" destination="162" id="UDQ-Pq-b0B"/>
                 <outlet property="imageHolder" destination="11" id="nm9-h5-MGG"/>
                 <outlet property="picker" destination="103" id="121"/>
+                <outlet property="plusButton" destination="128" id="lNu-9C-9j6"/>
                 <outlet property="view" destination="1" id="165"/>
             </connections>
         </placeholder>

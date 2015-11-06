@@ -18,7 +18,7 @@
     IBOutlet UIView *hud1;
     IBOutlet UIView *hud2;
     IBOutlet UIButton *iButton;
-    IBOutlet UIButton *arrowButton;
+    IBOutlet UIButton *plusButton;
 }
 
 - (IBAction)showPicker:(id)sender;

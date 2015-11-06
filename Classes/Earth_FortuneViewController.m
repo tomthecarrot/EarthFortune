@@ -74,7 +74,7 @@ bool reachable; // are the internet connection AND server available
         [UIView animateWithDuration:4 animations:^{
             horoText.alpha = 0.8;
             iButton.alpha = 0.8;
-            arrowButton.alpha = 0.8;
+            plusButton.alpha = 0.8;
         }];
     }
 }
@@ -262,7 +262,7 @@ bool reachable; // are the internet connection AND server available
     [UIView animateWithDuration:fadeTime animations:^{
         picker.alpha = 0.6;
         iButton.alpha = 0.0;
-        arrowButton.alpha = 0.0;
+        plusButton.alpha = 0.0;
     }];
 }
 
@@ -273,7 +273,7 @@ bool reachable; // are the internet connection AND server available
     [UIView animateWithDuration:fadeTime animations:^{
         picker.alpha = 0.0;
         iButton.alpha = 0.8;
-        arrowButton.alpha = 0.0;
+        plusButton.alpha = 0.0;
         horoText.alpha = 0.0;
     }];
 }
@@ -303,7 +303,7 @@ bool reachable; // are the internet connection AND server available
         picker.alpha = 0.0;
         horoText.alpha = 0.8;
         iButton.alpha = 0.8;
-        if (pickerEnabled) { arrowButton.alpha = 0.8; }
+        if (pickerEnabled) { plusButton.alpha = 0.8; }
     }];
 }
 
@@ -321,14 +321,14 @@ bool reachable; // are the internet connection AND server available
         // portrait mode, enable picker view
         [UIView animateWithDuration:0.5 animations:^{
             pickerEnabled = true;
-            arrowButton.alpha = 0.8;
+            plusButton.alpha = 0.8;
         }];
     }
     else {
         // landscape mode, disable picker view
         [UIView animateWithDuration:0.5 animations:^{
             pickerEnabled = false;
-            arrowButton.alpha = 0.0;
+            plusButton.alpha = 0.0;
         }];
     }
 }

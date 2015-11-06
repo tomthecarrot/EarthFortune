@@ -22,6 +22,7 @@ NSMutableArray *colors; // earth fade colors
 
 /* Views */
 const float fadeTime = 2.5;
+bool pickerEnabled = false; // is the horoscope sign picker view enabled?
 UIImage *earthDefault; // default white Earth to be tinted
 
 /* Objects */
@@ -37,6 +38,13 @@ bool reachable; // are the internet connection AND server available
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Request orientation updates
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self selector:@selector(orientationChanged:)
+     name:UIDeviceOrientationDidChangeNotification
+     object:[UIDevice currentDevice]];
     
     // Test network status
     [self testNetwork];
@@ -295,7 +303,7 @@ bool reachable; // are the internet connection AND server available
         picker.alpha = 0.0;
         horoText.alpha = 0.8;
         iButton.alpha = 0.8;
-        arrowButton.alpha = 0.8;
+        if (pickerEnabled) { arrowButton.alpha = 0.8; }
     }];
 }
 
@@ -303,6 +311,26 @@ bool reachable; // are the internet connection AND server available
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
+}
+
+- (void) orientationChanged:(NSNotification *)notif
+{
+    UIDevice * device = notif.object;
+    
+    if (device.orientation == UIDeviceOrientationPortrait || device.orientation == UIDeviceOrientationPortraitUpsideDown) {
+        // portrait mode, enable picker view
+        [UIView animateWithDuration:0.5 animations:^{
+            pickerEnabled = true;
+            arrowButton.alpha = 0.8;
+        }];
+    }
+    else {
+        // landscape mode, disable picker view
+        [UIView animateWithDuration:0.5 animations:^{
+            pickerEnabled = false;
+            arrowButton.alpha = 0.0;
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

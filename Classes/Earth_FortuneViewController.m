@@ -107,8 +107,6 @@ bool reachable; // are the internet connection AND server available
     
     // Parse the response
     if (horoscope.length > 0) {
-        horoscope = [horoscope substringFromIndex:3];
-        
         NSRange range = [horoscope rangeOfString:@"</p>"];
         if (range.location != NSNotFound) {
             horoscope = [horoscope substringToIndex:range.location];

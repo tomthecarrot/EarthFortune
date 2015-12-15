@@ -14,4 +14,5 @@ This app is developed by Thomas Suarez, Chief Engineer at [CarrotCorp](http://ca
 
 * Earth image (resources/earth.png) courtesy [NASA](https://www.nasa.gov/).
 * Background audio (resources/bgmusic.mp3) courtesy Kevin MacLeod, [Incompetech](www.incompetech.com).  
-* Background image (resources/spacebg.jpg) courtesy Juskteez Vu, [Unsplash](https://unsplash.com/photos/mwhklqGVzck).
+* Background image (resources/spacebg.jpg) courtesy Juskteez Vu, [Unsplash](https://unsplash.com/photos/mwhklqGVzck).  
+* Horoscopes (delivered in-app) courtesy Astrology.com (through custom HTML data collector)
